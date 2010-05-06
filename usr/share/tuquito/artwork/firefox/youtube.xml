@@ -1,0 +1,8 @@
+<SearchPlugin xmlns="http://www.mozilla.org/2006/browser/search/">
+<ShortName>Búsqueda de vídeos en YouTube</ShortName>
+<Description>Buscar vídeos en YouTube</Description>
+<InputEncoding>UTF-8</InputEncoding>
+<Image width="16" height="16">data:image/x-icon;base64,AAABAAEAEBAAAAEAGABoAwAAFgAAACgAAAAQAAAAIAAAAAEAGAAAAAAAAAAAABMLAAATCwAAAAAAAAAAAADQ0P8PCv8PCv8PCv8PCv8PCv8PCv8PCv8PCv8PCv8PCv8PCv8PCv8PCv8PCv/Q0P8PCv8AAOoAAOoAAOoAAOoAAOoAAOoAAOoAAOoAAOoAAOoAAOoAAOoAAOoAAOoPCv8PCv8PCv////8+Pv+sqv////////8+Pv/Fw/////+jov8PCv+Jhv/////Ixv8PCv8PCv8PCv////8+Pv////8PCv////8+Pv////8PCv////+Ihf////8PCv8PCv8PCv8PCv8PCv////8+Pv////8PCv////8+Pv////8PCv////+Ihf/////////Ixv8PCv8PCv8PCv////8+Pv////8PCv////8+Pv////////+sqv8PCv+sqv/r6//Ixv8PCv8PCv8PCv////8PCv8PCv8PCv8PCv8PCv////8PCv8PCv8PCv8PCv8PCv8PCv8PCv8PCv////////////8PCv8PCv8PCv8PCv////8PCv8PCv8PCv8PCv8PCv8PCv8PCv/Q0P8PCv8PCv8PCv8PCv8PCv8PCv8PCv8PCv8PCv8PCv8PCv8PCv8PCv8PCv/Q0P////////////////////////////////////////////////////////////////////////+d4fMAAAD9+8////87gKsAAAC6dVT///9en8sAAACaUjb///////////////////+d4fMAAAD9+8+d4fMAAAD///8AAAD9+88WXYv9+88AAAD///////////////////+d4fMAAAD9+8+d4fMAAAD///8AAAD9+88AAAD///8AAAD///////////////////9en8sAAADbuJH///87gKsAAAC6dVT///8AAAD///8AAAD///////////////////8AAAD8lewAAAD///////////////////////////////////////////////9en8sPOWz///+aUjbbuJH///////////////////////////////////////8AAD4KAAA8awAAPmMAAC5hAABsZQAAcmkAAC50AABrZQAAY3IAAHRvAAAvawAAPgoAADxzAABpbgAAY28AAGFw</Image>
+<Url type="text/html" method="GET" template="http://www.youtube.com/results?search_query={searchTerms}&amp;page={startPage?}&amp;utm_source=opensearch">
+</Url>
+</SearchPlugin>

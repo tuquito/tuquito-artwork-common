@@ -1,0 +1,8 @@
+/usr/share/tuquito/artwork/firefox/firefox.js /etc/firefox*/pref/firefox.js
+/usr/share/tuquito/artwork/firefox/prefs.js /etc/firefox*/profile/prefs.js
+/usr/share/tuquito/artwork/firefox/bookmarks.html /etc/firefox*/profile/bookmarks.html
+/usr/share/tuquito/artwork/firefox/browserconfig.properties /usr/lib/firefox*/browserconfig.properties
+/usr/share/tuquito/artwork/firefox/distribution.ini /usr/lib/firefox*/distribution/distribution.ini
+/usr/share/tuquito/artwork/firefox/google.xml /usr/lib/firefox-addons/searchplugins/google.xml
+/usr/share/tuquito/artwork/firefox/wikipedia.xml /usr/lib/firefox-addons/searchplugins/wikipedia.xml
+/usr/share/tuquito/artwork/firefox/youtube.xml /usr/lib/firefox-addons/searchplugins/youtube.xml

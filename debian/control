@@ -1,0 +1,13 @@
+Source: tuquito-artwork-common
+Section: system
+Priority: extra
+Maintainer: Mario Colque <mario@tuquito.org.ar>
+Build-Depends: debhelper (>= 7)
+Standards-Version: 3.8.1
+
+Package: tuquito-artwork-common
+Architecture: all
+Depends: tuquito-system
+Description: Arte en común entre las versiones de Tuquito
+ Arte usada en las versiones de Tuquito
+ * Tuquito Team! - 2010

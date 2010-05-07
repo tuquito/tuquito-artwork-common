@@ -1,3 +1,9 @@
+tuquito-artwork-common (0.1-2) lucid; urgency=high
+
+  * arreglos de dependencias
+
+ -- Mario Colque <mario@tuquito.org.ar>  Thu, 06 May 2010 21:46:49 -0300
+
 tuquito-artwork-common (0.1-1) lucid; urgency=low
 
   * Version inicial

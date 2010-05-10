@@ -1,3 +1,9 @@
+tuquito-artwork-common (0.1-6) lucid; urgency=low
+
+  * arreglo de seccion: misc
+
+ -- Mario Colque <mario@tuquito.org.ar>  Mon, 10 May 2010 18:14:35 -0300
+
 tuquito-artwork-common (0.1-5) lucid; urgency=low
 
   * cambio de urgencia a low

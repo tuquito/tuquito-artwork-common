@@ -1,5 +1,5 @@
 Source: tuquito-artwork-common
-Section: system
+Section: misc
 Priority: extra
 Maintainer: Mario Colque <mario@tuquito.org.ar>
 Build-Depends: debhelper (>= 7)

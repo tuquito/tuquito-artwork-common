@@ -1,3 +1,9 @@
+tuquito-artwork-common (0.1-7) lucid; urgency=low
+
+  * Modificada la pagina de inicio
+
+ -- Mario Colque <mario@tuquito.org.ar>  Mon, 10 May 2010 18:39:31 -0300
+
 tuquito-artwork-common (0.1-6) lucid; urgency=low
 
   * arreglo de seccion: misc

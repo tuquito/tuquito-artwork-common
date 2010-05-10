@@ -1,3 +1,9 @@
+tuquito-artwork-common (0.1-5) lucid; urgency=low
+
+  * cambio de urgencia a low
+
+ -- Mario Colque <mario@tuquito.org.ar>  Mon, 10 May 2010 14:21:21 -0300
+
 tuquito-artwork-common (0.1-4) lucid; urgency=high
 
   * correcciones en buscadores

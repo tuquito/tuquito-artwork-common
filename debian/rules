@@ -40,7 +40,7 @@ install: build
 	dh_installdirs
 
 	# Add here commands to install the package into debian/tuquito-artwork-common.
-	$(MAKE) DESTDIR=$(CURDIR)/debian/tuquito-artwork-common install
+	#$(MAKE) DESTDIR=$(CURDIR)/debian/tuquito-artwork-common install
 	cp -af etc $(CURDIR)/debian/tuquito-artwork-common/
 	cp -af usr $(CURDIR)/debian/tuquito-artwork-common/
 

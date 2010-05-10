@@ -1,3 +1,9 @@
+tuquito-artwork-common (0.1-9) lucid; urgency=low
+
+  * Corregido rules
+
+ -- Mario Colque <mario@tuquito.org.ar>  Mon, 10 May 2010 19:33:08 -0300
+
 tuquito-artwork-common (0.1-8) lucid; urgency=low
 
   * modificado para subir

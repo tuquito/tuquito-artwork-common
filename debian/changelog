@@ -1,3 +1,12 @@
+tuquito-artwork-common (0.1-10) lucid; urgency=low
+
+  * arreglado splash de openoffice.org
+  * arreglado plantillas de prueba de impresión
+  * eliminada pagina de inicio local
+  * agregada nueva pagina de inicio
+
+ -- Mario Colque <mario@tuquito.org.ar>  Thu, 03 Jun 2010 01:35:45 -0300
+
 tuquito-artwork-common (0.1-9) lucid; urgency=low
 
   * Corregido rules

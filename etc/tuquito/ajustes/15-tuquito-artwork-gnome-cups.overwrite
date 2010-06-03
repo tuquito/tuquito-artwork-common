@@ -1,2 +1,2 @@
-/usr/share/cups/data/testprint.ps /usr/share/system-config-printer/testpage-letter.ps
-/usr/share/cups/data/testprint.ps /usr/share/system-config-printer/testpage-a4.ps
+/usr/share/tuquito/artwork/printer/testpage-letter.ps /usr/share/system-config-printer/testpage-letter.ps
+/usr/share/tuquito/artwork/printer/testpage-a4.ps /usr/share/system-config-printer/testpage-a4.ps

@@ -10,7 +10,4 @@
  */
 
 // set default tuquito.org.ar
-user_pref("browser.startup.homepage", "file:///usr/share/tuquito/inicio/index.html");
-
-// sonido al finalizar descarga
-pref("downbar.function.soundOnComplete", 1);
+user_pref("browser.startup.homepage", "http://www.tuquito.org.ar/inicio/toba");

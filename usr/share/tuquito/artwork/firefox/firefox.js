@@ -26,8 +26,8 @@ pref("browser.search.param.yahoo-fr", "tuquito");
  */
 // Set the UserAgent
 pref("general.useragent.vendor", "Tuquito");
-pref("general.useragent.vendorSub", "4.0");
-pref("general.useragent.vendorComment", "4.0");
+pref("general.useragent.vendorSub", "4");
+pref("general.useragent.vendorComment", "Toba");
 
 // deshabilita ipv6
 pref("network.dns.disableIPv6", true);
@@ -79,4 +79,4 @@ pref("security.dialog_enable_delay", 0);
 pref("gfx.color_management.enabled", true);
 
 // sonido al finalizar descarga
-pref("downbar.function.soundOnComplete", 1);
+//pref("downbar.function.soundOnComplete", 1);

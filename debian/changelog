@@ -1,3 +1,9 @@
+tuquito-artwork-common (0.1-11) lucid; urgency=low
+
+  * correccion en nombre de splash
+
+ -- Mario Colque <mario@tuquito.org.ar>  Fri, 04 Jun 2010 13:17:34 -0300
+
 tuquito-artwork-common (0.1-10) lucid; urgency=low
 
   * arreglado splash de openoffice.org

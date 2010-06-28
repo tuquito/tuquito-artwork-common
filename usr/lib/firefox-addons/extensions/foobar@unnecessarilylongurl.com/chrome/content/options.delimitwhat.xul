@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?>
+<?xml-stylesheet href="chrome://foobar/skin/style.css" type="text/css"?>
+<!DOCTYPE dialog SYSTEM "chrome://foobar/locale/foobar.dtd">
+<prefwindow type="child" title="&foobar.ops.windowtitle;" buttons="accept" buttonalign="center" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	<prefpane id="saveoptions">
+		<preferences></preferences>
+		
+		<vbox>
+			<label value="&foobar.ops.delimitdesc1;" />
+			<label value="&foobar.ops.delimitdesc2;" />
+			<spacer flex="1" height="12px;" />
+			<label value="&foobar.ops.delimitdesc3;" />
+			<spacer flex="1" height="12px;" />
+			<label value="&foobar.ops.delimitdesc4;" />
+			<label value="&foobar.ops.delimitdesc5;" />
+			<spacer flex="1" height="12px;" />
+			<label value="&foobar.ops.delimitdesc6;" />
+			<label value="&foobar.ops.delimitdesc7;" />
+			<label value="&foobar.ops.delimitdesc8;" />
+			<spacer flex="1" height="12px;" />
+			<label value="&foobar.ops.delimitdesc9;" />
+		</vbox>
+	</prefpane>
+</prefwindow>

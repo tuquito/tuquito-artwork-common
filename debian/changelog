@@ -1,3 +1,10 @@
+tuquito-artwork-common (0.1-11.1) lucid; urgency=low
+
+  * Nuevas extensiones para Firefox
+  * Mejoras en firefox
+
+ -- Mario Colque <mario@tuquito.org.ar>  Mon, 28 Jun 2010 17:38:10 -0300
+
 tuquito-artwork-common (0.1-11) lucid; urgency=low
 
   * correccion en nombre de splash

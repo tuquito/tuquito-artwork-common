@@ -1,0 +1,3 @@
+content	stop-reload	chrome/content/
+
+overlay	chrome://browser/content/browser.xul	chrome://stop-reload/content/stop-reload.xul

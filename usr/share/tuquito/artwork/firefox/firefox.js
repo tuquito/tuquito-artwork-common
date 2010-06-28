@@ -24,6 +24,10 @@ pref("browser.search.param.yahoo-fr", "tuquito");
 /*
  * Mejoras Tuquito
  */
+
+//Delay de impresión 0
+pref("nglayout.initialpaint.delay", 0);
+
 // Set the UserAgent
 pref("general.useragent.vendor", "Tuquito");
 pref("general.useragent.vendorSub", "4");
@@ -56,9 +60,6 @@ pref("browser.urlbar.autoFill", true);
 // notificador integrado
 pref("browser.download.manager.showAlertOnComplete", false);
 
-// reduce el respaldo para marcadores
-pref("browser.bookmarks.max_backups", 2);
-
 // reduce el numero de pestañas y ventanas que puedes restaurar
 pref("browser.sessionstore.max_tabs_undo", 4);
 pref("browser.sessionstore.max_windows_undo", 1);
@@ -79,4 +80,4 @@ pref("security.dialog_enable_delay", 0);
 pref("gfx.color_management.enabled", true);
 
 // sonido al finalizar descarga
-//pref("downbar.function.soundOnComplete", 1);
+pref("downbar.function.soundOnComplete", 1);

@@ -1,0 +1,9 @@
+pref("browser.search.openintab", true);
+pref("browser.tabs.insertRelatedAfterCurrent", false);
+pref("extensions.foobar.suggestrich", false);
+pref("extensions.foobar.hidesearchbar", true);
+pref("extensions.foobar.historyOnTop", true);
+pref("extensions.foobar.ctrlscroll", true);
+pref("extensions.foobar.searchenginedelimiter", "/");
+pref("extensions.foobar.searchsuggestnum", 3);
+pref("extensions.foobar.urlsuggestnum", 3);

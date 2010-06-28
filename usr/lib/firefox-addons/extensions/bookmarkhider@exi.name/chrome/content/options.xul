@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<!DOCTYPE prefwindow SYSTEM "chrome://bookmarkhider/locale/options.dtd">
+<prefwindow id="bookmarkhider-preferences" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" title="&prefwindow.title;">
+  <prefpane id="pane1" label="&pane1.title;">
+    <preferences>
+      <preference id="slidepref" name="extensions.bookmarkhider.slide" type="bool"/>
+      <preference id="slidetimepref" name="extensions.bookmarkhider.slidetime" type="int"/>
+      <preference id="opentimepref" name="extensions.bookmarkhider.opentime" type="int"/>
+      <preference id="opendelaypref" name="extensions.bookmarkhider.opendelay" type="int"/>
+    </preferences>
+    <checkbox id="slide" preference="slidepref" label="&slide.label;" accesskey="&slide.accesskey;"/>
+    <label accesskey="&slidetime.accesskey;" control="slidetime">&slidetime.label;</label><textbox type="number" min="0" id="slidetime" preference="slidetimepref"/>
+    <label accesskey="&opentime.accesskey;" control="opentime">&opentime.label;</label><textbox type="number" min="0" id="opentime" preference="opentimepref"/>
+    <label accesskey="&opendelay.accesskey;" control="opendelay">&opendelay.label;</label><textbox type="number" min="0" id="opendelay" preference="opendelaypref"/>
+  </prefpane>
+</prefwindow>

@@ -1,0 +1,6 @@
+content		foobar					chrome/content/
+locale		foobar		en-US		chrome/locale/en-US/
+locale		foobar		tr-TR		chrome/locale/tr-TR/
+skin		foobar		default		chrome/skin/default/
+
+overlay chrome://browser/content/browser.xul chrome://foobar/content/browser.xul

@@ -7,7 +7,7 @@ Standards-Version: 3.8.1
 
 Package: tuquito-artwork-common
 Architecture: all
-Depends: tuquito-system
+Depends: tuquito-system, xul-ext-notify
 Description: Arte en común entre las versiones de Tuquito
  Arte usada en las versiones de Tuquito
  * Tuquito Team! - 2010

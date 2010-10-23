@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<!DOCTYPE window SYSTEM "chrome://fastYoutubeDownloader/locale/fastYoutubeDownloader.dtd">
+
+<prefwindow xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        orient="vertical"
+        title="&options.title;"
+	windowtype="prefwindow"
+        onload="fastYoutubeDownloaderSettings.init();"
+        ondialogaccept="return fastYoutubeDownloaderSettings.save();"
+	persist="screenX screenY">
+
+    <prefpane>
+	   <preferences>
+	       <preference id="useFirefoxDownloadManager" name="extensions.fastYoutubeDownloader@yevgenyandrov.net.useFirefoxDownloadManager" type="bool"/>
+
+	       <preference id="flv" name="extensions.fastYoutubeDownloader@yevgenyandrov.net.flv" type="bool"/>
+	       <preference id="3gp" name="extensions.fastYoutubeDownloader@yevgenyandrov.net.3gp" type="bool"/>
+	       <preference id="mp4" name="extensions.fastYoutubeDownloader@yevgenyandrov.net.mp4" type="bool"/>
+	       <preference id="hd" name="extensions.fastYoutubeDownloader@yevgenyandrov.net.hd" type="bool"/>
+
+	       <preference id="displayInSearchResults" name="extensions.fastYoutubeDownloader@yevgenyandrov.net.displayInSearchResults" type="bool"/>
+	       <preference id="displayInYoutubePage" name="extensions.fastYoutubeDownloader@yevgenyandrov.net.displayInYoutubePage" type="bool"/>
+	       <preference id="displayInEmbed" name="extensions.fastYoutubeDownloader@yevgenyandrov.net.displayInEmbed" type="bool"/>
+
+	    </preferences>
+
+
+	    <groupbox style="padding-top:5px">
+		<caption label="&options.displayVideoFormats;"/>
+  		<checkbox id="flv" label="&options.flv;" preference="flv"/>	
+  		<checkbox id="3gp" label="&options.3gp;" preference="3gp"/>	
+  		<checkbox id="mp4" label="&options.mp4;" preference="mp4"/>	
+  		<checkbox id="hd" label="&options.hd;" preference="hd"/>	
+	    </groupbox>	
+
+	    <groupbox style="padding-top:5px">
+		<caption label="&options.displayDownloadLinks;"/>
+  		<checkbox id="displayInYoutubePage" label="&options.displayVideoPage;" preference="displayInYoutubePage"/>	
+  		<checkbox id="displayInSearchResults" label="&options.displaySearchResults;" preference="displayInSearchResults"/>	
+  		<checkbox id="displayInEmbed" label="&options.displayEmbed;" preference="displayInEmbed"/>	
+	    </groupbox>	
+	    <groupbox style="padding-top:5px">
+		<caption label="Download Manager:"/>
+  		<checkbox id="useFirefoxDownloadManager" label="&options.useFirefoxDownloadManager;" preference="useFirefoxDownloadManager"/>	
+	    </groupbox>	
+
+    </prefpane>
+    <script type="application/x-javascript" src="chrome://fastYoutubeDownloader/content/settings.js"/>
+    <keyset>
+      <key keycode="VK_ESCAPE" oncommand="window.close();"/>
+    </keyset>
+</prefwindow>

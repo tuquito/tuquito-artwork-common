@@ -30,8 +30,8 @@ pref("nglayout.initialpaint.delay", 0);
 
 // Set the UserAgent
 pref("general.useragent.vendor", "Tuquito");
-pref("general.useragent.vendorSub", "4");
-pref("general.useragent.vendorComment", "Toba");
+pref("general.useragent.vendorSub", "4.1");
+pref("general.useragent.vendorComment", "Wichi");
 
 // deshabilita ipv6
 pref("network.dns.disableIPv6", true);

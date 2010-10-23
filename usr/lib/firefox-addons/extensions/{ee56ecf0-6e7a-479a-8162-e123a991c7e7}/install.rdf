@@ -6,7 +6,7 @@
   <Description about="urn:mozilla:install-manifest">
     <em:id>{ee56ecf0-6e7a-479a-8162-e123a991c7e7}</em:id>
     <em:name>autoHideStatusbar</em:name>
-    <em:version>0.4.6</em:version>
+    <em:version>0.4.7</em:version>
     <em:description>auto-hide Firefox status-bar</em:description>
     <em:creator>Régis Caspar</em:creator>
     <em:iconURL>chrome://autohidestatusbar/skin/icon.png</em:iconURL>
@@ -45,6 +45,7 @@
     <em:translator>Hunimini (Korean translation)</em:translator>
     <em:translator>Stoyan (Bulgarian translation)</em:translator>
     <em:translator>Natty Dreed (Arabic translation)</em:translator>
+    <em:translator>Dimassony (Indonesian [Indonesia] translation)</em:translator>
     <!-- Contributors -->
     <em:contributor>Robert Lehardy (OS X testing of the spinners)</em:contributor>
     <em:contributor>Ben Goodger (Code base for "about" dialog)</em:contributor>
@@ -60,7 +61,7 @@
       <!-- Firefox -->
       <Description>
         <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
-        <em:maxVersion>3.6.*</em:maxVersion>
+        <em:maxVersion>4.0b2pre</em:maxVersion>
         <em:minVersion>2.0</em:minVersion>
       </Description>
     </em:targetApplication>

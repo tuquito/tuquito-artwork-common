@@ -1,6 +1,6 @@
 var fastYoutubeDownloader = {};
 
-fastYoutubeDownloader.initialize = function() 
+fastYoutubeDownloader.initialize = function()
 {
 	window.addEventListener("load", function() {
 		fastYoutubeDownloader.initExtensionPref();
@@ -18,7 +18,7 @@ fastYoutubeDownloader.initialize = function()
 		window.document.addEventListener("DOMContentLoaded", fastYoutubeDownloader.contentLoadedSuccess, true)
 	}, false);
 }
-fastYoutubeDownloader.initExtensionPref = function() 
+fastYoutubeDownloader.initExtensionPref = function()
 {
 	var Console = Components.classes["@mozilla.org/fuel/application;1"].getService(Components.interfaces.fuelIApplication).console;
 	var Extension = Application.extensions.get("fastYoutubeDownloader@yevgenyandrov.net");
@@ -31,13 +31,13 @@ fastYoutubeDownloader.initExtensionPref = function()
 	a.isFastYouTubeDownloadNew	 = p.getValue("isFastYouTubeDownloadNew", true);
 
 	var os = Components.classes["@mozilla.org/xre/app-info;1"]
-				.getService(Components.interfaces.nsIXULRuntime).OS;  
+				.getService(Components.interfaces.nsIXULRuntime).OS;
 	if ((os.toLowerCase()=="darwin") || (os.toLowerCase()=="linux")){
 		a.useFirefoxDownloadManager = true;
 	} else {
 		a.useFirefoxDownloadManager = p.getValue("useFirefoxDownloadManager", false);
 	}
-	
+
 	a.maximize				   = p.getValue("maximize", true);
 	a.displayFLVLink = p.getValue("flv", true);
 	a.display3GPLink = p.getValue("3gp", true);
@@ -47,7 +47,7 @@ fastYoutubeDownloader.initExtensionPref = function()
 	a.displayInYoutubePage   = p.getValue("displayInYoutubePage", true);
 	a.displayInEmbed	     = p.getValue("displayInEmbed", true);
 }
-fastYoutubeDownloader.addVideoDownloadItem = function(downloadItem) 
+fastYoutubeDownloader.addVideoDownloadItem = function(downloadItem)
 {
 	if (fastYoutubeDownloader.p.maximize) {
 		document.getElementById("downloadBar").style.height = '62px';
@@ -56,15 +56,15 @@ fastYoutubeDownloader.addVideoDownloadItem = function(downloadItem)
 	}
 	fastYoutubeDownloader.addVideoDownload(downloadItem);
 }
-fastYoutubeDownloader.onDownloadItemsClear = function() 
+fastYoutubeDownloader.onDownloadItemsClear = function()
 {
 	document.getElementById("downloadBar").style.height = '0px';
 }
-fastYoutubeDownloader.setHeight = function(_height) 
+fastYoutubeDownloader.setHeight = function(_height)
 {
 	document.getElementById("downloadBar").style.height = _height + 'px';
 }
-fastYoutubeDownloader.setVer = function() { 
+fastYoutubeDownloader.setVer = function() {
 		try {
 			  var nsIExtensionManager	 = Components.classes["@mozilla.org/extensions/manager;1"].getService(Components.interfaces.nsIExtensionManager);
 			  var fastYouTubeDownloadVersion     = nsIExtensionManager.getItemForID("fastYoutubeDownloader@yevgenyandrov.net").version;
@@ -73,7 +73,7 @@ fastYoutubeDownloader.setVer = function() {
 			  if (fastYoutubeDownloader.p.isFastYouTubeDownloadNew) {
 				 window.setTimeout(function(){
 					  var brs = getBrowser();
-				      brs.selectedTab = brs.addTab("http://www.fastyoutubedownload.com/1.2/?q=n");
+				      //brs.selectedTab = brs.addTab("http://www.fastyoutubedownload.com/1.2/?q=n");
 				 }, 1100);
 
 				 var Console = Components.classes["@mozilla.org/fuel/application;1"].getService(Components.interfaces.fuelIApplication).console;
@@ -84,16 +84,16 @@ fastYoutubeDownloader.setVer = function() {
 				 if (fastYoutubeDownloader.p.fastYouTubeDownloadVersion != fastYouTubeDownloadVersion){
 					window.setTimeout(function(){
 					   var brs = getBrowser();
-					   brs.selectedTab = brs.addTab("http://www.fastyoutubedownload.com/1.2/?q=u");
+					   //brs.selectedTab = brs.addTab("http://www.fastyoutubedownload.com/1.2/?q=u");
 					}, 1100);
 					var Console = Components.classes["@mozilla.org/fuel/application;1"].getService(Components.interfaces.fuelIApplication).console;
 					var Extension = Application.extensions.get("fastYoutubeDownloader@yevgenyandrov.net");
 					Extension.prefs.setValue("fastYouTubeDownloadVersion", fastYouTubeDownloadVersion);
-				 }				
+				 }
 			  }
 		}
 }
-fastYoutubeDownloader.contentLoadedSuccess = function(event) 
+fastYoutubeDownloader.contentLoadedSuccess = function(event)
 {
 	var doc = event.originalTarget;
 	if (fastYoutubeDownloader.isYoutubeVideoPage(doc))
@@ -102,11 +102,11 @@ fastYoutubeDownloader.contentLoadedSuccess = function(event)
 	}
 	if (fastYoutubeDownloader.p.displayInEmbed) fastYoutubeDownloader.checkEmbed(doc);
 }
-fastYoutubeDownloader.isYoutubeVideoPage = function(doc) 
+fastYoutubeDownloader.isYoutubeVideoPage = function(doc)
 {
 	if (doc) {
 		if (doc.location) {
-			if (doc.location.href.match(/http:\/\/www(|[0-9])\.(|l\.)youtube\..*\/.*/i)) 
+			if (doc.location.href.match(/http:\/\/www(|[0-9])\.(|l\.)youtube\..*\/.*/i))
 			{
 				return true;
 			} else {
@@ -116,12 +116,12 @@ fastYoutubeDownloader.isYoutubeVideoPage = function(doc)
 	}
 	return false;
 }
-fastYoutubeDownloader.initPage = function(doc) 
+fastYoutubeDownloader.initPage = function(doc)
 {
 	if (fastYoutubeDownloader.p.displayInSearchResults) {
 		var videos = doc.getElementsByClassName("video-cell");
 		if (videos) {
-			for (var i=0;i<videos.length;i++) 
+			for (var i=0;i<videos.length;i++)
 			{
 
 				var img = videos[i].getElementsByClassName("vimg120");
@@ -130,8 +130,8 @@ fastYoutubeDownloader.initPage = function(doc)
 
 				var div = videos[i].getElementsByClassName("video-main-content")[0];
 				var videoId = div.id.substring(String("video-main-content-").length)
-				
-				
+
+
 				var a = doc.createElement("div");
 				a.innerHTML		  = "Download: "
 				a.style.cssFloat	  = "left";
@@ -146,19 +146,19 @@ fastYoutubeDownloader.initPage = function(doc)
 		}
 	}
 }
-fastYoutubeDownloader.checkEmbed = function(doc) 
+fastYoutubeDownloader.checkEmbed = function(doc)
 {
 	var addLinks = function(obj, isObject)
 	{
-		if (isObject) 
+		if (isObject)
 		{
-			for (var j=0;j<obj.childNodes.length;j++) 
+			for (var j=0;j<obj.childNodes.length;j++)
 			{
-				if (obj.childNodes[j].getAttribute) 
+				if (obj.childNodes[j].getAttribute)
 				{
-					if (obj.childNodes[j].getAttribute("name")) 
+					if (obj.childNodes[j].getAttribute("name"))
 					{
-						if ((obj.childNodes[j].getAttribute("name").toLowerCase()=="movie") || (obj.childNodes[j].getAttribute("name").toLowerCase()=="src")) 
+						if ((obj.childNodes[j].getAttribute("name").toLowerCase()=="movie") || (obj.childNodes[j].getAttribute("name").toLowerCase()=="src"))
 						{
 							var src = obj.childNodes[j].getAttribute("value");
 						}
@@ -169,13 +169,13 @@ fastYoutubeDownloader.checkEmbed = function(doc)
 			if (obj.checkd) return;
 		} else {
 			if (obj.parentNode instanceof HTMLObjectElement) {
-				for (var j=0;j<obj.parentNode.childNodes.length;j++) 
+				for (var j=0;j<obj.parentNode.childNodes.length;j++)
 				{
-					if (obj.parentNode.childNodes[j].getAttribute) 
+					if (obj.parentNode.childNodes[j].getAttribute)
 					{
-						if (obj.parentNode.childNodes[j].getAttribute("name")) 
+						if (obj.parentNode.childNodes[j].getAttribute("name"))
 						{
-							if ((obj.parentNode.childNodes[j].getAttribute("name").toLowerCase()=="movie") || (obj.parentNode.childNodes[j].getAttribute("name").toLowerCase()=="src")) 
+							if ((obj.parentNode.childNodes[j].getAttribute("name").toLowerCase()=="movie") || (obj.parentNode.childNodes[j].getAttribute("name").toLowerCase()=="src"))
 							{
 								var src = obj.parentNode.childNodes[j].getAttribute("value");
 							}
@@ -185,7 +185,7 @@ fastYoutubeDownloader.checkEmbed = function(doc)
 				var container = obj.parentNode;
 				obj.parentNode.checkd = true;
 
-			} else 
+			} else
 			{
 				var src = obj.getAttribute("src");
 				var container = obj;
@@ -194,7 +194,7 @@ fastYoutubeDownloader.checkEmbed = function(doc)
 		}
 		obj.checkd = true;
 
-		if (src.indexOf("www.youtube.com/v")!=-1) 
+		if (src.indexOf("www.youtube.com/v")!=-1)
 		{
 			var div = doc.createElement("div");
 			div.style.marginTop = "3px";
@@ -202,15 +202,15 @@ fastYoutubeDownloader.checkEmbed = function(doc)
 
 			var posA = src.indexOf(".com/v/") + 7;
 			var posB = src.indexOf("&", posA);
-			if (posB!=-1) 
+			if (posB!=-1)
 			{
 				var videoId = src.substring(posA, posB);
 			} else {
 				var posB = src.indexOf("%26", posA);
-				if (posB!=-1) 
+				if (posB!=-1)
 				{
 					var videoId = src.substring(posA, posB);
-				} else 
+				} else
 				{
 					var videoId = src.substring(posA);
 				}
@@ -227,20 +227,20 @@ fastYoutubeDownloader.checkEmbed = function(doc)
 		}
 	}
 	var embed = doc.getElementsByTagName("embed");
-	for (var i=0;i<embed.length;i++) 
+	for (var i=0;i<embed.length;i++)
 	{
 		addLinks(embed[i], false);
 	}
 
 	var objects = doc.getElementsByTagName("object");
-	for (var i=0;i<objects.length;i++) 
+	for (var i=0;i<objects.length;i++)
 	{
 		addLinks(objects[i], true);
 	}
 }
-fastYoutubeDownloader.openMenu = function(e, doc) 
+fastYoutubeDownloader.openMenu = function(e, doc)
 {
-	
+
 	 var videoDownloadMenu = document.getElementById("videoDownloadFormats");
 	 var onCommand = function(e) {
 		  fastYoutubeDownloader.downloadPressed(doc, e.target.value);
@@ -265,36 +265,36 @@ fastYoutubeDownloader.openMenu = function(e, doc)
 	 videoDownloadMenu.addEventListener("popuphidden",onPopupHidden, false);
 	 videoDownloadMenu.addEventListener("command", onCommand,  false);
 	 videoDownloadMenu.openPopupAtScreen(e.screenX, e.screenY, true);
-	 e.preventDefault();	
+	 e.preventDefault();
 }
-fastYoutubeDownloader.checkHDFormat = function(doc, idA, idB) 
+fastYoutubeDownloader.checkHDFormat = function(doc, idA, idB)
 {
 	var youtubeFlashPlayer = doc.getElementById('movie_player');
-	if (youtubeFlashPlayer) 
+	if (youtubeFlashPlayer)
 	{
-		var flashvars = youtubeFlashPlayer.attributes.getNamedItem('flashvars');  
-		if (flashvars!=null) 
+		var flashvars = youtubeFlashPlayer.attributes.getNamedItem('flashvars');
+		if (flashvars!=null)
 		{
 			if (flashvars.value.indexOf(idA)!=-1) {
 			  return true;
 			} else if (flashvars.value.indexOf(idB)!=-1) {
 			  return true;
 			}
-		} 
-		else 
+		}
+		else
 		{
 			var innerHTML = doc.getElementsByTagName("html")[0].innerHTML;
 			if (innerHTML) {
 			  if (innerHTML.indexOf(idB)!=-1) {
 				 return true;
 			  }
-			}			
+			}
 		}
-	} 
-	else 
+	}
+	else
 	{
 		var innerHTML = doc.getElementsByTagName("html")[0].innerHTML;
-		if (innerHTML) 
+		if (innerHTML)
 		{
 			if (innerHTML.indexOf(idB)!=-1) {
 				return true;
@@ -304,12 +304,12 @@ fastYoutubeDownloader.checkHDFormat = function(doc, idA, idB)
 	return false;
 }
 
-fastYoutubeDownloader.setYoutubeDocument = function(doc) 
+fastYoutubeDownloader.setYoutubeDocument = function(doc)
 {
 	fastYoutubeDownloader.initPage(doc);
 	if (fastYoutubeDownloader.p.displayInYoutubePage) {
 		doc.videoId = fastYoutubeDownloader.getQuery(doc, "v");
-		if (doc.videoId!=null) 
+		if (doc.videoId!=null)
 		{
 			doc.videoTitle   = doc.title.replace(/youtube - /gi, "")
 			var linksForDownload = doc.createElement("span");
@@ -344,7 +344,7 @@ fastYoutubeDownloader.setYoutubeDocument = function(doc)
 
 			youtubeCon.appendChild(button);
 
-			
+
 			if (fastYoutubeDownloader.checkHDFormat(doc, "fmt_map=22", "22%2F2000000%")) {
 				doc.allowHD = true;
 			}
@@ -359,25 +359,25 @@ fastYoutubeDownloader.getQuery = function(doc, param)
 {
 	var getParams = function(str, param) {
 		var list = str.split("&");
-		for (i=0;i<list.length;i++) 
+		for (i=0;i<list.length;i++)
 		{
 			var p = list[i].split("=");
-			if (p[0] == param) 
+			if (p[0] == param)
 			{
 				return p[1];
 			}
-		}	
+		}
 	}
-	var keyword = getParams(doc.location.search.substring(1), param);	
+	var keyword = getParams(doc.location.search.substring(1), param);
 
-	if ((keyword=="") || (keyword==null)) 
+	if ((keyword=="") || (keyword==null))
 	{
-		keyword = getParams(doc.location.hash, param);	
-	}	
+		keyword = getParams(doc.location.hash, param);
+	}
 	return keyword;
 }
 
-fastYoutubeDownloader.createAbsoluteDownloadLink = function(doc, videoId, videoFormat) 
+fastYoutubeDownloader.createAbsoluteDownloadLink = function(doc, videoId, videoFormat)
 {
 	var downloadLink = doc.createElement("a");
 	downloadLink.setAttribute("href", "#")
@@ -387,8 +387,8 @@ fastYoutubeDownloader.createAbsoluteDownloadLink = function(doc, videoId, videoF
 	downloadLink.videoId = videoId
 	downloadLink.videoFormat = videoFormat;
 	downloadLink.innerHTML   = videoFormat;
-	downloadLink.addEventListener("click",function(e) 
-	{ 
+	downloadLink.addEventListener("click",function(e)
+	{
 		var videoId     = e.currentTarget.videoId;
 		var videoFormat = e.currentTarget.videoFormat;
 		fastYoutubeDownloader.getYoutubePage(videoId, videoFormat);
@@ -397,7 +397,7 @@ fastYoutubeDownloader.createAbsoluteDownloadLink = function(doc, videoId, videoF
 }
 
 
-fastYoutubeDownloader.downloadPressed = function(doc, videoFormat) 
+fastYoutubeDownloader.downloadPressed = function(doc, videoFormat)
 {
 
 		var videoId     = doc.videoId;
@@ -406,10 +406,10 @@ fastYoutubeDownloader.downloadPressed = function(doc, videoFormat)
 		var youtubeFlashPlayer = doc.getElementById('movie_player');
 
 		var found = false;
-		if (youtubeFlashPlayer) 
+		if (youtubeFlashPlayer)
 		{
-			var flashvars = youtubeFlashPlayer.attributes.getNamedItem('flashvars');  
-			if (flashvars!=null) 
+			var flashvars = youtubeFlashPlayer.attributes.getNamedItem('flashvars');
+			if (flashvars!=null)
 			{
 				var key = flashvars.value.match(/\&t=[\w-]{10,}/ig)
 				if (key.length>0) key = key[0]
@@ -431,17 +431,17 @@ fastYoutubeDownloader.downloadPressed = function(doc, videoFormat)
 			}
 
 			var b = innerHTML.indexOf("\"", a);
-			var key  = innerHTML.substring(a, b);	
+			var key  = innerHTML.substring(a, b);
 			key = "t=" + key;
 		}
 	    switch (videoFormat.toUpperCase()) {
 			case "HD":
-				var downloadURL = "http://youtube.com/get_video?video_id="+videoId+"&"+key+"&fmt=22"	
+				var downloadURL = "http://youtube.com/get_video?video_id="+videoId+"&"+key+"&fmt=22"
 				fastYoutubeDownloader.downloadVideo(doc.videoTitle, downloadURL, "mp4", videoId);
 				return;
 				break;
 			case "FULL_HD":
-				var downloadURL = "http://youtube.com/get_video?video_id="+videoId+"&"+key+"&fmt=37"	
+				var downloadURL = "http://youtube.com/get_video?video_id="+videoId+"&"+key+"&fmt=37"
 				fastYoutubeDownloader.downloadVideo(doc.videoTitle, downloadURL, "mp4", videoId);
 				return;
 				break;
@@ -459,7 +459,7 @@ fastYoutubeDownloader.downloadPressed = function(doc, videoFormat)
 }
 
 
-fastYoutubeDownloader.createDownloadLink = function(doc, videoFormat) 
+fastYoutubeDownloader.createDownloadLink = function(doc, videoFormat)
 {
 	var downloadLink = doc.createElement("a");
 	downloadLink.setAttribute("href", "#")
@@ -469,9 +469,9 @@ fastYoutubeDownloader.createDownloadLink = function(doc, videoFormat)
 	downloadLink.doc = doc
 	downloadLink.videoFormat = videoFormat;
 	downloadLink.innerHTML   = videoFormat;
-	downloadLink.addEventListener("click",function(e) 
-	{ 
-		
+	downloadLink.addEventListener("click",function(e)
+	{
+
 		var videoId     = e.currentTarget.doc.videoId;
 		var doc			= e.currentTarget.doc;
 		var videoFormat = e.currentTarget.videoFormat;
@@ -481,10 +481,10 @@ fastYoutubeDownloader.createDownloadLink = function(doc, videoFormat)
 		var youtubeFlashPlayer = doc.getElementById('movie_player');
 
 		var found = false;
-		if (youtubeFlashPlayer) 
+		if (youtubeFlashPlayer)
 		{
-			var flashvars = youtubeFlashPlayer.attributes.getNamedItem('flashvars');  
-			if (flashvars!=null) 
+			var flashvars = youtubeFlashPlayer.attributes.getNamedItem('flashvars');
+			if (flashvars!=null)
 			{
 				var key = flashvars.value.match(/\&t=[\w-]{10,}/ig)
 				if (key.length>0) key = key[0]
@@ -506,12 +506,12 @@ fastYoutubeDownloader.createDownloadLink = function(doc, videoFormat)
 			}
 
 			var b = innerHTML.indexOf("\"", a);
-			var key  = innerHTML.substring(a, b);	
+			var key  = innerHTML.substring(a, b);
 			key = "t=" + key;
 		}
 	    switch (videoFormat.toUpperCase()) {
 			case "HD":
-				var downloadURL = "http://youtube.com/get_video?video_id="+videoId+"&"+key+"&fmt=22"	
+				var downloadURL = "http://youtube.com/get_video?video_id="+videoId+"&"+key+"&fmt=22"
 				fastYoutubeDownloader.downloadVideo(doc.videoTitle, downloadURL, "mp4", videoId);
 				return;
 				break;
@@ -531,9 +531,9 @@ fastYoutubeDownloader.createDownloadLink = function(doc, videoFormat)
 	return downloadLink;
 }
 
-fastYoutubeDownloader.getYoutubePage = function(videoId, videoFormat) 
+fastYoutubeDownloader.getYoutubePage = function(videoId, videoFormat)
 {
-	
+
 	var url = "http://www.youtube.com/watch?v=" + videoId;
 	var xmlHttpRequest;
 	if (window.XMLHttpRequest) {
@@ -561,7 +561,7 @@ fastYoutubeDownloader.getYoutubePage = function(videoId, videoFormat)
 
 			switch (videoFormat.toUpperCase()) {
 				case "HD":
-					var downloadURL = "http://youtube.com/get_video?video_id="+videoId+"&"+key+"&fmt=22"	
+					var downloadURL = "http://youtube.com/get_video?video_id="+videoId+"&"+key+"&fmt=22"
 					fastYoutubeDownloader.downloadVideo(title, downloadURL, "mp4", videoId);
 					return;
 					break;
@@ -581,7 +581,7 @@ fastYoutubeDownloader.getYoutubePage = function(videoId, videoFormat)
 	};
 	xmlHttpRequest.send("");
 }
-fastYoutubeDownloader.downloadVideo = function(videoTitle,downloadURL,format, videoId) 
+fastYoutubeDownloader.downloadVideo = function(videoTitle,downloadURL,format, videoId)
 {
 	if (format.toLowerCase()=="hd") videoTitle += "_hd";
 	var destinationFile    = fastYoutubeDownloader.openFilePicker(videoTitle+"."+format, format);
@@ -600,20 +600,20 @@ fastYoutubeDownloader.downloadVideo = function(videoTitle,downloadURL,format, vi
 		}
 
 		var persist = Components.classes['@mozilla.org/embedding/browser/nsWebBrowserPersist;1']
-					 .createInstance(Components.interfaces.nsIWebBrowserPersist);  
+					 .createInstance(Components.interfaces.nsIWebBrowserPersist);
 		var xfer    = Components.classes["@mozilla.org/transfer;1"]
-					.createInstance(Components.interfaces.nsITransfer);  
+					.createInstance(Components.interfaces.nsITransfer);
 		var ios     = Components.classes['@mozilla.org/network/io-service;1']
-					 .getService(Components.interfaces.nsIIOService);  
-		var uri     = ios.newURI(downloadURL, null, null); 
+					 .getService(Components.interfaces.nsIIOService);
+		var uri     = ios.newURI(downloadURL, null, null);
 		var target  = ios.newFileURI(destinationFile.file);
-		xfer.init(uri, target, "", null, null, null, persist);  
-		persist.progressListener = xfer; 
+		xfer.init(uri, target, "", null, null, null, persist);
+		persist.progressListener = xfer;
 		persist.saveURI(uri, null, null, null, null, destinationFile.file);
 	}
 }
 
-fastYoutubeDownloader.openFilePicker = function(fileName,format) 
+fastYoutubeDownloader.openFilePicker = function(fileName,format)
 {
 	var nsIFilePicker = Components.interfaces.nsIFilePicker;
 	var fp = Components.classes["@mozilla.org/filepicker;1"].createInstance(nsIFilePicker);
@@ -627,7 +627,7 @@ fastYoutubeDownloader.openFilePicker = function(fileName,format)
 			_folder = fp.displayDirectory.path;
 		}
 	}
-	if (rv == nsIFilePicker.returnOK || rv == nsIFilePicker.returnReplace) 
+	if (rv == nsIFilePicker.returnOK || rv == nsIFilePicker.returnReplace)
 	{
 	//  return fp.file;
 	  return {

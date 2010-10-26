@@ -1,3 +1,9 @@
+tuquito-artwork-common (0.1-15) maverick; urgency=low
+
+  * new tab in firefox by fastYoutubeDownloader deleted
+
+ -- Mario Colque <mario@tuquito.org.ar>  Tue, 26 Oct 2010 02:54:35 -0300
+
 tuquito-artwork-common (0.1-14) maverick; urgency=low
 
   * rebranded to Wichi

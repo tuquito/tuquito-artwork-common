@@ -1,3 +1,10 @@
+tuquito-artwork-common (0.1-17) maverick; urgency=low
+
+  * New printer test
+  * new favicon in bookmarks
+
+ -- Mario Colque <mario@tuquito.org.ar>  Wed, 17 Nov 2010 20:14:27 -0300
+
 tuquito-artwork-common (0.1-16) maverick; urgency=low
 
   * new tab in firefox by fastYoutubeDownloader deleted finally

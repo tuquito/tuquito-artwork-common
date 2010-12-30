@@ -1,3 +1,9 @@
+tuquito-artwork-common (0.1-18) maverick; urgency=low
+
+  * fixed permissions
+
+ -- Mario Colque <mario@tuquito.org.ar>  Thu, 30 Dec 2010 20:24:15 -0300
+
 tuquito-artwork-common (0.1-17) maverick; urgency=low
 
   * New printer test

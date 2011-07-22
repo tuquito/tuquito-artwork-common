@@ -1,5 +1,0 @@
-content     fastYoutubeDownloader    chrome/content/
-content     fastYoutubeDownloader    chrome/content/ contentaccessible=yes
-skin	    fastYoutubeDownloader  classic/1.0	chrome/skin/
-overlay     chrome://browser/content/browser.xul chrome://fastYoutubeDownloader/content/mainOverlay.xul
-locale	    fastYoutubeDownloader en-US chrome/locale/en-US/

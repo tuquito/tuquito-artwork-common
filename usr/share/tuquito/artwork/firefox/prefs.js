@@ -10,4 +10,4 @@
  */
 
 // set default tuquito.org.ar
-user_pref("browser.startup.homepage", "http://www.tuquito.org.ar/start/wichi");
+user_pref("browser.startup.homepage", "http://www.tuquito.org.ar/start/pampa");

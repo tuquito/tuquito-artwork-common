@@ -24,17 +24,16 @@ pref("browser.search.param.yahoo-fr", "tuquito");
 /*
  * Mejoras Tuquito
  */
+// Set the UserAgent
+pref("general.useragent.vendor", "Tuquito");
+pref("general.useragent.vendorSub", "5");
+pref("general.useragent.vendorComment", "Pampa");
+
+// Disable ipv6
+pref("network.dns.disableIPv6", true);
 
 //Delay de impresión 0
 pref("nglayout.initialpaint.delay", 0);
-
-// Set the UserAgent
-pref("general.useragent.vendor", "Tuquito");
-pref("general.useragent.vendorSub", "4.1");
-pref("general.useragent.vendorComment", "Wichi");
-
-// deshabilita ipv6
-pref("network.dns.disableIPv6", true);
 
 // prefetch
 pref("network.prefetch-next", false);

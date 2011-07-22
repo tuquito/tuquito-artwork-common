@@ -1,8 +1,0 @@
-<!ENTITY bookmarkhider.label "Your localized menuitem">
-<!ENTITY bookmarkhiderContext.label "Your Menuitem">
-<!ENTITY bookmarkhiderContext.accesskey "Y">
-<!ENTITY bookmarkhiderToolbarButton.label "Your Toolbar Button">
-<!ENTITY bookmarkhiderToolbarButton.tooltip "This is your toolbar button!">
-<!ENTITY bookmarkhiderSidebar.label "Your Sidebar">
-<!ENTITY bookmarkhiderToolbar.name  "example">
-<!ENTITY bookmarkhiderToolbar.label "This is an example toolbar. You can hide it under View &gt; toolbars &gt; &bookmarkhiderToolbar.name;">

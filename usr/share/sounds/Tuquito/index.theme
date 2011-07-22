@@ -1,0 +1,6 @@
+[Sound Theme]
+Name=LinuxMint
+Directories=stereo
+
+[stereo]
+OutputProfile=stereo

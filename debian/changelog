@@ -1,3 +1,9 @@
+tuquito-artwork-common (0.1-20) natty; urgency=low
+
+  * depends removed
+
+ -- Mario Colque <mario@tuquito.org.ar>  Wed, 10 Aug 2011 22:28:38 -0300
+
 tuquito-artwork-common (0.1-19) natty; urgency=low
 
   * Pampa branch

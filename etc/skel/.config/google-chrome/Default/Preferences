@@ -1,0 +1,14 @@
+{
+   "extensions": {
+      "theme": {
+         "id": "",
+         "use_system": false
+      }
+   },
+   "homepage": "http://www.tuquito.org.ar/start/pampa",
+   "homepage_is_newtabpage": false,
+   "instant": {
+      "enabled": false,
+      "enabled_once": true
+   }
+}

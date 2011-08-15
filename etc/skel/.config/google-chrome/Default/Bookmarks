@@ -1,0 +1,66 @@
+{
+   "checksum": "40ee8a9b698683c04819a1c0a552b02d",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "12957896398896433",
+            "id": "2",
+            "name": "Tuquito",
+            "type": "url",
+            "url": "http://www.tuquito.org.ar/"
+         }, {
+            "date_added": "12957896403746919",
+            "id": "3",
+            "name": "Blog",
+            "type": "url",
+            "url": "http://blog.tuquito.org.ar/"
+         }, {
+            "date_added": "12957896406964520",
+            "id": "4",
+            "name": "TukiPedia",
+            "type": "url",
+            "url": "http://tukipedia.tuquito.org.ar/?title=Portada"
+         }, {
+            "date_added": "12957897381297387",
+            "id": "8",
+            "name": "Tuquito Social",
+            "type": "url",
+            "url": "http://social.tuquito.org.ar/"
+         }, {
+            "date_added": "12957897451329439",
+            "id": "9",
+            "name": "Universo Tuquito",
+            "type": "url",
+            "url": "http://universo.tuquito.org.ar/"
+         }, {
+            "date_added": "12957896425761110",
+            "id": "5",
+            "name": "DistroWatch.com: Tuquito",
+            "type": "url",
+            "url": "http://distrowatch.com/tuquito"
+         } ],
+         "date_added": "11644473600000000",
+         "date_modified": "12957897456266976",
+         "id": "1",
+         "name": "Barra de marcadores",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "11644473600000000",
+         "date_modified": "0",
+         "id": "6",
+         "name": "Otros marcadores",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "11644473600000000",
+         "date_modified": "0",
+         "id": "7",
+         "name": "Marcadores sincronizados",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}

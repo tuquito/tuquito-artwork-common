@@ -1,3 +1,9 @@
+tuquito-artwork-common (0.1-22) natty; urgency=low
+
+  * new defaults config
+
+ -- Mario Colque <mario@tuquito.org.ar>  Mon, 15 Aug 2011 16:04:39 -0300
+
 tuquito-artwork-common (0.1-21) natty; urgency=low
 
   * new firefox configs

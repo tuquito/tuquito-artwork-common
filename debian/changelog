@@ -1,3 +1,9 @@
+tuquito-artwork-common (0.1-23) precise; urgency=low
+
+  * Guarani branch
+
+ -- Mario Colque <mario@tuquito.org.ar>  Tue, 29 May 2012 21:58:14 -0300
+
 tuquito-artwork-common (0.1-22) natty; urgency=low
 
   * new defaults config

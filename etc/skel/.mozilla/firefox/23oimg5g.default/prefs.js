@@ -15,20 +15,17 @@ user_pref("browser.search.param.yahoo-fr", "tuquito");
 
 // Set the UserAgent
 user_pref("general.useragent.vendor", "Tuquito");
-user_pref("general.useragent.vendorSub", "5");
-user_pref("general.useragent.vendorComment", "Pampa");
+user_pref("general.useragent.vendorSub", "6");
+user_pref("general.useragent.vendorComment", "Guaraní");
 
 // Activate the backspace key for browsing back
 user_pref("browser.backspace_action", 0);
-
-// Disable ipv6
-user_pref("network.dns.disableIPv6", true);
 
 // Ignore Mozilla release notes startup pages
 user_pref("browser.startup.homepage_override.mstone", "ignore");
 
 // Homepage
-user_pref("browser.startup.homepage", "http://www.tuquito.org.ar/start/pampa");
+user_pref("browser.startup.homepage", "http://tuquito.org.ar/start/guarani");
 
 // Save tabs before exiting
 user_pref("browser.showQuitWarning", true);

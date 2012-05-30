@@ -26,11 +26,8 @@ pref("browser.search.param.yahoo-fr", "tuquito");
  */
 // Set the UserAgent
 pref("general.useragent.vendor", "Tuquito");
-pref("general.useragent.vendorSub", "5");
-pref("general.useragent.vendorComment", "Pampa");
-
-// Disable ipv6
-pref("network.dns.disableIPv6", true);
+pref("general.useragent.vendorSub", "6");
+pref("general.useragent.vendorComment", "Guaraní");
 
 //Delay de impresión 0
 pref("nglayout.initialpaint.delay", 0);

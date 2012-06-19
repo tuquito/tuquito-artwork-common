@@ -7,12 +7,12 @@
    },
    "browser": {
       "custom_chrome_frame": true
-   }
+   },
    "homepage": "http://tuquito.org.ar/start/guarani",
    "homepage_is_newtabpage": false,
    "profile": {
       "name": "Tuquito"
-   }
+   },
    "instant": {
       "enabled": false,
       "enabled_once": true

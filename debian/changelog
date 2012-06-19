@@ -1,3 +1,9 @@
+tuquito-artwork-common (0.1-25) precise; urgency=low
+
+  * Google Chrome preferences fixed
+
+ -- Mario Colque <mario@tuquito.org.ar>  Tue, 19 Jun 2012 02:35:31 -0300
+
 tuquito-artwork-common (0.1-24) precise; urgency=low
 
   * Google Chrome Artwork fixed

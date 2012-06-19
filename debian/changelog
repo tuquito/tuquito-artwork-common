@@ -1,3 +1,9 @@
+tuquito-artwork-common (0.1-24) precise; urgency=low
+
+  * Google Chrome Artwork fixed
+
+ -- Mario Colque <mario@tuquito.org.ar>  Tue, 19 Jun 2012 00:30:25 -0300
+
 tuquito-artwork-common (0.1-23) precise; urgency=low
 
   * Guarani branch
